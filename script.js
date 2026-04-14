@@ -34,6 +34,24 @@ let activeIndex = null;
 let score = 0;
 let feeding = false;
 
+const rootStyle = document.documentElement.style;
+const animateDynamicBackground = () => {
+  const time = performance.now() * 0.00012;
+  const x1 = 18 + Math.sin(time * 1.2) * 6;
+  const y1 = 12 + Math.cos(time * 0.9) * 5;
+  const x2 = 82 + Math.cos(time * 1.1) * 7;
+  const y2 = 86 + Math.sin(time * 0.8) * 6;
+  const hue = 205 + Math.sin(time * 0.7) * 22;
+  rootStyle.setProperty('--bg-x1', `${x1}%`);
+  rootStyle.setProperty('--bg-y1', `${y1}%`);
+  rootStyle.setProperty('--bg-x2', `${x2}%`);
+  rootStyle.setProperty('--bg-y2', `${y2}%`);
+  rootStyle.setProperty('--bg-angle', `${180 + Math.sin(time * 0.4) * 18}deg`);
+  rootStyle.setProperty('--light-cyan', `hsl(${hue}, 94%, 74%)`);
+  rootStyle.setProperty('--muted-blue', `hsl(${hue - 28}, 47%, 64%)`);
+  requestAnimationFrame(animateDynamicBackground);
+};
+
 const renderCards = () => {
   appGrid.innerHTML = '';
   appList.forEach((app, index) => {
@@ -189,5 +207,6 @@ treatButton.addEventListener('click', () => feedCat(3));
 resetButton.addEventListener('click', resetGame);
 window.addEventListener('hashchange', ensureNavigationState);
 
+animateDynamicBackground();
 renderCards();
 ensureNavigationState();

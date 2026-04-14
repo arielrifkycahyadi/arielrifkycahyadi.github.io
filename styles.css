@@ -10,6 +10,11 @@
   --shadow: 0 24px 72px rgba(0, 0, 0, 0.22);
   --radius: 28px;
   --transition: all 0.28s ease;
+  --bg-x1: 18%;
+  --bg-y1: 12%;
+  --bg-x2: 82%;
+  --bg-y2: 86%;
+  --bg-angle: 175deg;
 }
 
 * {
@@ -21,10 +26,41 @@
 html {
   scroll-behavior: smooth;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, rgba(156, 213, 255, 0.16), transparent 26%),
-              radial-gradient(circle at bottom right, rgba(122, 170, 206, 0.18), transparent 22%),
-              linear-gradient(180deg, #061015 0%, #0f1b2a 100%);
+  background: linear-gradient(var(--bg-angle), rgba(6, 16, 21, 0.96) 0%, rgba(15, 27, 42, 0.98) 100%);
   color: var(--off-white);
+  background-attachment: fixed;
+  animation: bgFlow 36s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(circle at 15% 20%, rgba(120, 210, 255, 0.32), transparent 24%),
+              radial-gradient(circle at 85% 80%, rgba(75, 155, 255, 0.18), transparent 20%),
+              radial-gradient(circle at 40% 50%, rgba(255, 255, 255, 0.08), transparent 20%);
+  opacity: 0.85;
+  filter: blur(34px);
+  transform: perspective(1000px) rotateX(12deg) rotateY(-18deg) scale(1.18);
+  transform-origin: center;
+  pointer-events: none;
+  animation: gradientDrift 28s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background: conic-gradient(from 160deg at 50% 50%, rgba(15, 28, 50, 0.88), rgba(55, 102, 168, 0.14) 35%, rgba(114, 183, 255, 0.12) 65%, rgba(15, 28, 50, 0.9));
+  opacity: 0.92;
+  filter: blur(22px);
+  transform: perspective(1000px) rotateX(25deg) rotateY(20deg) scale(1.12);
+  transform-origin: center;
+  pointer-events: none;
+  animation: gradientRotate 32s linear infinite;
 }
 
 body {
@@ -79,6 +115,8 @@ button:hover {
   padding: 36px 28px;
   display: grid;
   gap: 28px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
 }
 
 .hero::before,
@@ -88,6 +126,7 @@ button:hover {
   filter: blur(72px);
   opacity: 0.55;
   pointer-events: none;
+  animation: heroParallax 20s ease-in-out infinite;
 }
 
 .hero::before {
@@ -208,6 +247,8 @@ button:hover {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.14);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  transform-style: preserve-3d;
+  animation: heroDepth 18s ease-in-out infinite;
 }
 
 .hero-visual .cat-silhouette {
@@ -281,6 +322,8 @@ button:hover {
   width: 36px;
   height: 36px;
   color: var(--light-cyan);
+  transform-style: preserve-3d;
+  animation: float3D 7s ease-in-out infinite;
 }
 
 .feature-card h3 {
@@ -324,15 +367,17 @@ button:hover {
   border-radius: 28px;
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.05);
-  transition: var(--transition);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
   cursor: pointer;
   overflow: hidden;
   min-height: 180px;
 }
 
 .app-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(156,213,255,0.48);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(156,213,255,0.68);
+  box-shadow: 0 28px 70px rgba(36, 129, 255, 0.12), inset 0 0 0 1px rgba(156,213,255,0.12);
+  background: rgba(255,255,255,0.08);
 }
 
 .app-card::after {
@@ -602,6 +647,73 @@ button:hover {
   font-size: 0.95rem;
   padding-top: 14px;
   border-top: 1px solid rgba(255,255,255,0.08);
+  animation: floatSoft 18s ease-in-out infinite;
+}
+
+.hero-visual {
+  animation: heroDepth 18s ease-in-out infinite, floatSoft 14s ease-in-out infinite;
+}
+
+.feature-card {
+  animation: floatSoft 16s ease-in-out infinite;
+}
+
+.game-button {
+  animation: floatSoft 20s ease-in-out infinite;
+}
+
+@keyframes gradientDrift {
+  0% {
+    transform: perspective(1000px) rotateX(12deg) rotateY(-18deg) scale(1.18) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-12deg) scale(1.16) translate3d(4%, 2%, 0);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(14deg) rotateY(-22deg) scale(1.20) translate3d(-4%, -3%, 0);
+  }
+}
+
+@keyframes gradientRotate {
+  0% {
+    transform: perspective(1000px) rotateX(25deg) rotateY(20deg) scale(1.12);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(28deg) rotateY(22deg) scale(1.14);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(25deg) rotateY(20deg) scale(1.12);
+  }
+}
+
+@keyframes floatSoft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bgFlow {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 25% 15%;
+  }
+  50% {
+    background-position: 50% 40%;
+  }
+  75% {
+    background-position: 75% 30%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 @media (min-width: 720px) {
@@ -635,5 +747,31 @@ button:hover {
 @media (min-width: 1360px) {
   .bento-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@keyframes heroParallax {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  25% { transform: translate3d(-8px, 6px, 0) scale(1.01); }
+  50% { transform: translate3d(10px, -12px, 0) scale(1.01); }
+  75% { transform: translate3d(-6px, 10px, 0) scale(1.01); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+@keyframes heroDepth {
+  0%, 100% { transform: rotateX(0deg) rotateY(0deg) translateZ(0); }
+  40% { transform: rotateX(5deg) rotateY(-4deg) translateZ(8px); }
+  60% { transform: rotateX(-3deg) rotateY(6deg) translateZ(10px); }
+}
+
+@keyframes float3D {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  45% {
+    transform: translate3d(0, -6px, 6px) rotateX(4deg) rotateY(6deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1);
   }
 }
