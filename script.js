@@ -1,7 +1,10 @@
 const appList = [
   { title: 'Macneo-by-madeai-artriel', url: 'https://arielrifkycahyadi.github.io/neomac-by-madeai/', description: 'Pengalaman web futuristik Macneo yang terinspirasi karya MadeAI dengan nuansa warna modern dan minimal.' },
+  { title: 'Artriel Art Gallery', url: 'https://arielrifkycahyadi.github.io/artriel-art-gallery', description: 'Galeri seni Artriel yang menampilkan karya visual dengan antarmuka yang elegan dan responsif.' },
   { title: 'Madeai Pricelist Xiaomi Phone', url: 'https://harga-mi-madeai.lovable.app', description: 'Tampilan harga Xiaomi yang rapi dan efisien, dibuat untuk membantu pengguna menemukan informasi produk cepat.' },
+  { title: 'Play Kalimba with Madeai', url: 'https://kalimba-madeai-learn.lovable.app', description: 'Aplikasi interaktif untuk belajar dan memainkan Kalimba dengan panduan MadeAI yang intuitif.' },
   { title: 'Madeai Sky Seer', url: 'https://madeai-sky.lovable.app', description: 'Antarmuka langit futuristik yang memberikan sensasi eksplorasi data secara halus dan immersif.' },
+  { title: 'Nuklir Power untuk Indonesia', url: 'https://energi-nu-madeai.lovable.app', description: 'Platform edukasi tentang energi nuklir dan potensinya untuk kemajuan teknologi Indonesia modern.' },
   { title: 'Madeai - leetcoderLearning', url: 'https://ai.studio/apps/a0d8329e-40ee-4caf-b132-0c35599f1982?fullscreenApplet=true', description: 'Prototipe pembelajaran algoritma dan pemrograman dari MadeAI untuk pengembang yang haus tantangan.' },
   { title: 'Album Keluarga Ariel', url: 'https://usmansidar.lovable.app', description: 'Galeri kenangan keluarga dalam pengalaman web yang hangat dan mudah dinavigasi.' },
   { title: 'Sosmed Kit Test Concept Ariel', url: 'https://arielcobakonek.lovable.app', description: 'Konsep kit sosial media untuk eksplorasi interaksi dan prototype pengalaman pengguna.' },
