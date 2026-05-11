@@ -1,1 +1,1 @@
-Web by Ariel madeai
+Web by Ariel Usman
