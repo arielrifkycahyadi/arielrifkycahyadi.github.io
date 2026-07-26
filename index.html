@@ -1,134 +1,244 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ariel Portfolio | MadeAI</title>
-  <meta name="description" content="Landing page portofolio Ariel dengan desain futuristik, grid Bento, dan mini-game Feed the Fat Cat." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Ariel Usman | Portfolio & Web Gallery</title>
+  <meta name="description" content="Portal portofolio interaktif Ariel Usman. Kumpulan proyek kreatif, simulator, dan aplikasi pembelajaran." />
+  
+  <!-- Tailwind CSS v4 Play CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-gradient {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #eff6ff 100%);
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+    }
+  </style>
 </head>
-<body>
-  <main class="page-shell">
-    <section class="hero" id="hero">
-      <div class="hero-header">
-        <div class="hero-label"><span class="badge-dot"></span>MadeAI Portfolio</div>
-        <h1 class="hero-title">Ariel's Futuristic Web Gallery</h1>
-        <p class="hero-copy">Website portofolio Ariel dengan atmosfer futuristik, penuh gerakan halus dan pengalaman SPA asli. Semua interaksi dilakukan tanpa reload dengan logika visual yang elegan.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="exploreBtn">Telusuri Proyek</button>
-          <button class="btn" id="learnMoreBtn">Detail Aplikasi</button>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-card">
-          <div class="cat-silhouette">
-            <div class="cat-ear left"></div>
-            <div class="cat-ear right"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<body class="custom-gradient text-slate-800 min-height-screen flex flex-col">
 
-    <section class="highlight-shell" aria-label="Ikon utama portofolio">
-      <div class="feature-icons">
-        <article class="feature-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 4v16"/><path d="M16 4v16"/></svg>
-          <h3>Web App</h3>
-          <p>Galeri proyek dengan tautan langsung ke platform live dan antarmuka yang responsif.</p>
-        </article>
-        <article class="feature-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v12"/><path d="M6 12h12"/><path d="M7.5 7.5l9 9"/></svg>
-          <h3>SPA Murni</h3>
-          <p>Seluruh halaman bergerak secara dinamis lewat DOM tanpa memuat ulang ulang.</p>
-        </article>
-        <article class="feature-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-14 0"/><path d="M12 5v2"/><path d="M12 17v2"/><path d="M5 12H3"/><path d="M21 12h-2"/></svg>
-          <h3>Minimal Futuristik</h3>
-          <p>Palet MadeAI dengan nuansa netral-teknologi, tajam namun ramah mata.</p>
-        </article>
-        <article class="feature-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5H5a2 2 0 0 0-2 2v3"/><path d="M16 5h3a2 2 0 0 1 2 2v3"/><path d="M16 19h3a2 2 0 0 0 2-2v-3"/><path d="M8 19H5a2 2 0 0 1-2-2v-3"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
-          <h3>Game Ringan</h3>
-          <p>Mini-game Feed the Fat Cat tersedia di bagian bawah untuk interaksi kecil.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="grid-shell">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-emerald-200 group-hover:scale-105 transition-transform">
+          AU
+        </div>
         <div>
-          <div class="section-title">Bento Box Gallery</div>
-          <div class="featured-note">
-            <span class="note-mark"></span>
-            Klik setiap kartu untuk melihat detail internal tanpa memuat ulang halaman.
+          <span class="font-extrabold text-lg tracking-tight block">Ariel Usman</span>
+          <span class="text-xs text-slate-500 -mt-1 block">Creative Polymath & Creator</span>
+        </div>
+      </a>
+      
+      <!-- Nav Links -->
+      <div class="hidden md:flex items-center gap-8 font-medium">
+        <a href="index.html" class="text-emerald-600 hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+          <i data-lucide="home" class="w-4 h-4"></i> Beranda
+        </a>
+        <a href="dashboard.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i> Dashboard
+        </a>
+        <a href="about.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="user" class="w-4 h-4"></i> Tentang Saya
+        </a>
+        <a href="contact.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-4 h-4"></i> Kontak
+        </a>
+      </div>
+
+      <!-- Action Button -->
+      <div>
+        <a href="dashboard.html" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl font-semibold shadow-sm transition-all flex items-center gap-2 text-sm">
+          Eksplorasi Proyek <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="max-w-7xl mx-auto px-6 pt-16 pb-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center flex-grow">
+    <!-- Left Column: Content -->
+    <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
+      <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 self-center lg:self-start border border-emerald-100">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Selamat Datang di Portofolio Resmi
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        Eksplorasi Ide, <br class="hidden sm:inline" />
+        Seni & <span class="text-emerald-500 underline decoration-wavy decoration-emerald-200 underline-offset-8">Teknologi</span>
+      </h1>
+      <p class="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
+        Saya adalah <strong>Ariel Usman</strong>, seorang kreator konten dan pembelajar mandiri yang memadukan dunia pemrograman, sains, pengembangan kepribadian, dan simulasi interaktif.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+        <a href="dashboard.html" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-emerald-100 transition-all transform hover:-translate-y-0.5 flex items-center gap-3">
+          <i data-lucide="layout-grid" class="w-5 h-5"></i> Buka Galeri Portofolio
+        </a>
+        <a href="about.html" class="bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-2xl font-semibold border border-slate-200 transition-all flex items-center gap-2">
+          Selengkapnya Tentang Saya
+        </a>
+      </div>
+
+      <!-- Social Quick Links -->
+      <div class="mt-8 pt-8 border-t border-slate-200/60 flex items-center justify-center lg:justify-start gap-6 text-slate-500">
+        <span class="text-xs uppercase tracking-wider font-semibold">Ikuti Saya:</span>
+        <a href="https://instagram.com/arielrcun" target="_blank" rel="noopener noreferrer" class="hover:text-pink-600 transition-colors flex items-center gap-1.5 font-medium text-sm">
+          <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i> @arielrcun
+        </a>
+        <a href="https://tiktok.com/@madeai5" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors flex items-center gap-1.5 font-medium text-sm">
+          <i data-lucide="music-2" class="w-4 h-4 text-slate-800"></i> @madeai5
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Bento Summary -->
+    <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+      <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between h-44 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-500">
+          <i data-lucide="code-2" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-3xl font-black text-slate-900 block">60+</span>
+          <span class="text-sm text-slate-500 font-medium">Proyek Web & App</span>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between h-44 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-500">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-3xl font-black text-slate-900 block">100%</span>
+          <span class="text-sm text-slate-500 font-medium">Interaktif & Tanpa Backend</span>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col justify-between h-44 col-span-2 card-hover relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-10 translate-x-4 translate-y-4">
+          <i data-lucide="book-open" class="w-32 h-32"></i>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-500">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
           </div>
-          <div class="bento-grid" id="appGrid"></div>
+          <span class="font-bold text-slate-900">Edukasi & Mindset Terapan</span>
         </div>
+        <p class="text-sm text-slate-500 mt-2">
+          Memetakan gagasan rumit seperti Hubungan Cemas-Menghindar, Hukum Pareto, hingga pemikiran Karl Marx secara visual.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase Highlights -->
+  <section class="bg-white border-t border-slate-100 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Mengapa Menjelajahi Portofolio Ini?</h2>
+        <p class="text-slate-500 mt-3">Kombinasi aplikasi praktis, simulator, dan media belajar interaktif dalam satu dashboard terintegrasi.</p>
       </div>
 
-      <div class="detail-panel" id="detailPanel">
-        <h2 id="detailTitle">Selamat Datang di MadeAI Ariel</h2>
-        <p class="detail-text" id="detailText">Pilih sebuah aplikasi dari Bento Box untuk melihat deskripsi dan tautan. Semua navigasi tetap di dalam halaman ini.</p>
-        <div class="detail-actions">
-          <a class="open-link disabled" id="detailLink" href="#" target="_blank" rel="noreferrer noopener">Pilih aplikasi untuk membuka</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="game-shell" id="gameSection">
-      <div class="game-title">
-        <h3>Feed the Fat Cat</h3>
-        <div class="game-status" id="gameStatus">Skor: <span id="gameScore">0</span> | Klik tombol untuk menjatuhkan makanan</div>
-      </div>
-      <div class="game-board">
-        <div class="cat-stage" id="catStage">
-          <div class="cat-face" aria-hidden="true">
-            <div class="cat-eye left"></div>
-            <div class="cat-eye right"></div>
-            <div class="cat-mouth"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col items-start card-hover">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="gauge" class="w-6 h-6"></i>
           </div>
-          <div class="bowl" aria-hidden="true"></div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Simulator & Fisika</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Eksplorasi simulasi katrol lift, membawa mobil simulator, hingga sistem kasir yang dapat langsung dicoba.
+          </p>
+          <a href="dashboard.html?category=interactive" class="text-emerald-600 hover:text-emerald-700 font-bold text-sm inline-flex items-center gap-1 mt-auto">
+            Buka Simulator <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
         </div>
-        <div class="game-actions">
-          <button class="game-button" id="feedButton">Berikan Makanan</button>
-          <button class="game-button" id="treatButton">Set Makanan Cepat</button>
-          <button class="game-button" id="resetButton">Ulangi</button>
-        </div>
-      </div>
-    </section>
 
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="contact-list">
-          <a class="contact-link" href="https://instagram.com/madeai.ariel" target="_blank" rel="noreferrer noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            Instagram: @madeai.ariel
-          </a>
-          <a class="contact-link" href="https://tiktok.com/@madeai5" target="_blank" rel="noreferrer noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8.5a4 4 0 0 0 4 4h1v3a4 4 0 1 1-4-4"/><path d="M15 3v8.5h4"/></svg>
-            TikTok: @madeai5
-          </a>
-          <a class="contact-link" href="https://www.youtube.com/@MadeAIAriel" target="_blank" rel="noreferrer noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.5 4 12 4 12 4s-6.5 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29.75 29.75 0 0 0 1 12a29.75 29.75 0 0 0 .45 5.58A2.78 2.78 0 0 0 3.4 19.55C5.5 20 12 20 12 20s6.5 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29.75 29.75 0 0 0 23 12a29.75 29.75 0 0 0-.46-5.58Z"/><path d="m9.75 15.02 5.5-3.02L9.75 9.01Z"/></svg>
-            YouTube: @MadeAIAriel
-          </a>
-          <a class="contact-link" href="mailto:madeaircun@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="m22 7-10 7L2 7"/></svg>
-            Email: madeaircun@gmail.com
-          </a>
-        </div>
-        <div style="display:grid; gap:12px;">
-          <div style="font-size:0.95rem; color:rgba(247,248,240,0.85);">Ariel's portofolio ini dibangun sebagai SPA modern dengan navigasi halus dan estetika futuristik.</div>
-          <div style="display:inline-flex; gap:8px; align-items:center; color:rgba(156,213,255,0.88);">
-            <span>🐾</span>
-            <span>Desain MadeAI yang bersih, logis, dan profesional.</span>
+        <!-- Card 2 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col items-start card-hover">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
           </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Psikologi & Pengembangan Diri</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Pahami pola hubungan anxious-avoidant, trik otak agar disiplin harian, hingga konsep istana pikiran (Mind Palace).
+          </p>
+          <a href="dashboard.html?category=lifestyle" class="text-blue-600 hover:text-blue-700 font-bold text-sm inline-flex items-center gap-1 mt-auto">
+            Pelajari Mindset <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col items-start card-hover">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="book-open" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Pengetahuan Umum</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Materi informatif tentang sejarah kebudayaan Bugis, kota Bulukumba, perbedaan kodok-katak, hingga penjelasan teori Karl Marx.
+          </p>
+          <a href="dashboard.html?category=learning" class="text-amber-600 hover:text-amber-700 font-bold text-sm inline-flex items-center gap-1 mt-auto">
+            Pelajari Materi <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
         </div>
       </div>
-      <div class="footer-note">Dibuat oleh: Madeai Ariel</div>
-    </footer>
-  </main>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-lg">
+            AU
+          </div>
+          <span class="font-extrabold text-white text-lg tracking-tight">Ariel Usman</span>
+        </div>
+        <p class="text-sm max-w-sm leading-relaxed">
+          Kompilasi karya portofolio web murni berbasis client-side. Dibangun secara mandiri untuk berbagi wawasan dan inovasi interaktif.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:items-end justify-between">
+        <div class="flex gap-6 mb-6">
+          <a href="https://instagram.com/arielrcun" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+            <i data-lucide="instagram" class="w-6 h-6"></i>
+          </a>
+          <a href="https://tiktok.com/@madeai5" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+            <i data-lucide="music-2" class="w-6 h-6"></i>
+          </a>
+        </div>
+        <span class="text-xs text-slate-500">
+          &copy; 2026 Ariel Usman. Seluruh Hak Cipta Dilindungi.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
 </body>
 </html>

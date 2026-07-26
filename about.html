@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Saya | Ariel Usman</title>
+  
+  <!-- Tailwind CSS v4 Play CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-gradient {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #eff6ff 100%);
+    }
+  </style>
+</head>
+<body class="custom-gradient text-slate-800 min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-emerald-200 group-hover:scale-105 transition-transform">
+          AU
+        </div>
+        <div>
+          <span class="font-extrabold text-lg tracking-tight block">Ariel Usman</span>
+          <span class="text-xs text-slate-500 -mt-1 block">Creative Polymath & Creator</span>
+        </div>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8 font-medium">
+        <a href="index.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="home" class="w-4 h-4"></i> Beranda
+        </a>
+        <a href="dashboard.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i> Dashboard
+        </a>
+        <a href="about.html" class="text-emerald-600 hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+          <i data-lucide="user" class="w-4 h-4"></i> Tentang Saya
+        </a>
+        <a href="contact.html" class="text-slate-600 hover:text-emerald-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-4 h-4"></i> Kontak
+        </a>
+      </div>
+
+      <div>
+        <a href="dashboard.html" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-xl font-semibold shadow-sm transition-all text-sm">
+          Portofolio
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Content Section -->
+  <main class="max-w-4xl mx-auto px-6 py-16 w-full flex-grow flex flex-col gap-12">
+    <!-- Intro Block -->
+    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col md:flex-row gap-8 items-center">
+      <div class="w-32 h-32 rounded-3xl bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0 shadow-inner">
+        <i data-lucide="user-check" class="w-16 h-16"></i>
+      </div>
+      <div>
+        <h1 class="text-3xl font-extrabold text-slate-900 leading-tight">Halo, Saya Ariel Usman</h1>
+        <p class="text-slate-500 font-semibold mt-1">Content Creator, Programmer, & Polymath</p>
+        <p class="text-slate-600 text-sm leading-relaxed mt-4">
+          Saya senang mengeksplorasi ilmu baru secara mandiri. Mulai dari membangun aplikasi interaktif mini hingga menyelami teori sosiologi-politik. Proyek-proyek di halaman ini adalah bentuk komitmen saya dalam menuangkan riset ke dalam wujud visual yang mudah dinikmati siapapun.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skills Bento Grid -->
+    <section>
+      <h2 class="text-2xl font-extrabold text-slate-900 text-center mb-8">Kombinasi Keahlian</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Web Dev -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-emerald-50 text-emerald-500 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="code" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">Web Development</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Membangun single-page aplikasi interaktif, simulator dinamis, dan dashboard modern murni di sisi klien.</p>
+          </div>
+        </div>
+
+        <!-- 2D Animator -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="play" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">2D Animation & Body Mechanics</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Fokus pada penerapan 12 prinsip animasi dasar, kontrol pergerakan fisik (Body Mechanics), dan pergerakan halus (Fluidity) untuk stiker digital/GIF.</p>
+          </div>
+        </div>
+
+        <!-- Creative Designer -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">Creative Graphic Design</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Merancang materi komunikasi visual komersial (F&B) dengan manipulasi foto berani, serta tata letak desain korporat yang formal dan rapi.</p>
+          </div>
+        </div>
+
+        <!-- Meme Admin -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-pink-50 text-pink-500 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">Meme Account Management</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Mengelola akun Mr. Garbage dan merancang meme/komik strip untuk membangun engagement interaksi tinggi dengan audiens internet culture.</p>
+          </div>
+        </div>
+
+        <!-- Video Editor -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="video" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">Video Editing & PNGTuber Assets</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Siklus lengkap produksi video edukatif/hiburan 'Faceless Channel' menggunakan model avatar buatan sendiri dan teknik retensi penonton tinggi.</p>
+          </div>
+        </div>
+
+        <!-- Multimedia generalist -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4">
+          <div class="w-12 h-12 bg-amber-50 text-amber-500 rounded-xl flex items-center justify-center shrink-0">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900">Multimedia Generalist</h3>
+            <p class="text-slate-500 text-xs mt-1 leading-relaxed">Eksplorasi lintas media visual mulai dari pixel art retro, flat design minimalis, hingga fotografi arsitektur perkotaan.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Values / Vision -->
+    <div class="bg-slate-900 text-slate-100 p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center gap-8 shadow-lg shadow-emerald-950/10">
+      <div class="max-w-lg">
+        <h2 class="text-xl font-bold text-white mb-2">Lihat Portofolio Lengkap</h2>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Semua proyek web murni, simulator interaktif, dan galeri desain kreatif saya tersedia di dashboard utama.
+        </p>
+      </div>
+      <a href="dashboard.html" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-xl transition-colors whitespace-nowrap text-sm flex items-center gap-2">
+        <i data-lucide="layout-grid" class="w-4 h-4"></i> Buka Galeri Portofolio
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 text-center text-xs">
+      &copy; 2026 Ariel Usman. Seluruh Hak Cipta Dilindungi.
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
