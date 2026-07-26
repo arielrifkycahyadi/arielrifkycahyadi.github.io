@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Portofolio | Ariel Usman</title>
+  <meta name="description" content="Katalog dasbor portofolio interaktif Ariel Usman (MADEAI). Jelajahi 80+ proyek website, simulator game/fisika, karya tulis, dan branding." />
+  <meta name="keywords" content="Ariel Usman, Portofolio Ariel Usman, Simulator Fisika, Kalimba Virtual, MadeAI, Web App" />
+  <meta name="author" content="Ariel Usman" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dashboard Portofolio | Ariel Usman" />
+  <meta property="og:description" content="Jelajahi 80+ proyek website, simulator game/fisika, karya tulis, dan branding milik Ariel Usman." />
+  <meta property="og:image" content="assets/foto-ariel-utama.jpg" />
   
   <!-- Tailwind CSS v4 Play CDN -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -85,7 +94,7 @@
     <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
       <div>
         <h1 class="text-2xl font-extrabold text-slate-900">Galeri Portofolio Interaktif</h1>
-        <p class="text-sm text-slate-500 mt-1">Eksplorasi total 60+ proyek web, simulasi, dan materi edukasi buatan Ariel Usman.</p>
+        <p class="text-sm text-slate-500 mt-1">Eksplorasi total 80+ proyek web, tulisan, dan konsultasi kreatif buatan Ariel Usman.</p>
       </div>
 
       <!-- Search Box -->
@@ -102,7 +111,7 @@
       </div>
     </div>
 
-    <!-- Category Tabs -->
+    <!-- Category Tabs (Reordered) -->
     <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="categoryTabs">
       <button data-category="all" class="px-5 py-2 rounded-2xl text-sm font-semibold whitespace-nowrap bg-emerald-500 text-white shadow-sm transition-all cursor-pointer">
         Semua Proyek
@@ -121,6 +130,12 @@
       </button>
       <button data-category="tools" class="px-5 py-2 rounded-2xl text-sm font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/60 transition-all cursor-pointer">
         🛠️ Utilitas & App
+      </button>
+      <button data-category="writing" class="px-5 py-2 rounded-2xl text-sm font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/60 transition-all cursor-pointer">
+        ✍️ Karya Tulis & Opini
+      </button>
+      <button data-category="branding" class="px-5 py-2 rounded-2xl text-sm font-semibold whitespace-nowrap bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/60 transition-all cursor-pointer">
+        💼 Branding & Konsultan
       </button>
     </div>
 
@@ -225,7 +240,9 @@
     // Category mapping text
     const categoryNames = {
       all: 'Semua Proyek',
+      writing: 'Karya Tulis & Opini',
       creative: 'Desain & Kreatif',
+      branding: 'Branding & Konsultan',
       interactive: 'Simulator & Game',
       learning: 'Edukasi & Pengetahuan',
       lifestyle: 'Mindset & Hubungan',
@@ -275,7 +292,9 @@
           card.className = "bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-md transition-all cursor-pointer group";
           
           let catIcon = '🔷';
+          if (proj.category === 'writing') catIcon = '✍️';
           if (proj.category === 'creative') catIcon = '🎨';
+          if (proj.category === 'branding') catIcon = '💼';
           if (proj.category === 'interactive') catIcon = '🎰';
           if (proj.category === 'learning') catIcon = '📖';
           if (proj.category === 'lifestyle') catIcon = '🌱';
@@ -287,8 +306,8 @@
                 <span class="text-xl">${catIcon}</span>
                 <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-500">${categoryNames[proj.category] || proj.category}</span>
               </div>
-              <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1">${proj.title}</h3>
-              <p class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">${proj.description}</p>
+              <h3 class="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors line-clamp-1 text-sm">${proj.title}</h3>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">${proj.description}</p>
             </div>
             <div class="mt-4 flex items-center justify-between border-t border-slate-50/60 pt-3">
               <span class="text-[10px] text-slate-400 font-semibold flex items-center gap-1">

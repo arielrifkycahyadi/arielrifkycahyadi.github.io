@@ -43,6 +43,214 @@ const projects = [
     description: 'Siklus produksi lengkap video \'Faceless Channel\': penulisan naskah, desain karakter & aset PNGTuber, hingga editing video dinamis.'
   },
 
+  // --- BRANDING & KONSULTAN (NEW) ---
+  {
+    title: 'MADEAI Personal Branding Ariel',
+    url: 'https://linktr.ee/madeaircun',
+    category: 'branding',
+    description: 'Direktori tautan resmi personal branding Ariel Usman (MADEAI).'
+  },
+  {
+    title: 'OBBKdotCom: Homeless Media',
+    url: 'https://www.instagram.com/obbkdotcom/',
+    category: 'branding',
+    description: 'Profil OBBKdotCom, layanan penyediaan dan konsultasi media kreatif independen.'
+  },
+  {
+    title: 'NDNSanti: Web Developer Portfolio',
+    url: 'https://ndnsanti19.github.io/listproject.html',
+    category: 'branding',
+    description: 'Portofolio kolaboratif jasa pengembangan situs web developer NDNSanti.'
+  },
+
+  // --- KARYA TULIS & OPINI (NEW) ---
+  {
+    title: 'Emosian dan Baca Pikiran Orang Tidak Membuatmu Cerdas',
+    url: 'https://medium.com/@a.r.cusman05789/emosian-dan-baca-pikiran-orang-tidak-membuatmu-cerdas-384a8315f231',
+    category: 'writing',
+    description: 'Esai kritis mengenai miskonsepsi kecerdasan emosional dan fenomena pseudosains membaca pikiran orang lain.'
+  },
+  {
+    title: 'Kapan Ariel Menikah? Analisis Sosial & Ekonomi',
+    url: 'https://medium.com/@a.r.cusman05789/kapan-ariel-menikah-analisis-dengan-pendekatan-sosial-dan-ekonomi-5291498ce172',
+    category: 'writing',
+    description: 'Analisis semi-humor berdasar pendekatan sosiologi dan ekonomi mengenai waktu pernikahan ideal.'
+  },
+  {
+    title: 'Oposisi Baik Benar ala Pandji Pragiwaksono',
+    url: 'https://medium.com/@a.r.cusman05789/oposisi-baik-benar-ala-pandji-bukan-petualang-pragiwaksono-3e5e74acd848',
+    category: 'writing',
+    description: 'Opini tentang struktur oposisi politik yang sehat merujuk pada pemikiran komedian Pandji Pragiwaksono.'
+  },
+  {
+    title: 'Kamu Sebenarnya Tidak Depresi',
+    url: 'https://medium.com/@a.r.cusman05789/kamu-sebenarnya-tidak-depresi-dan-kenapa-depresi-harus-selalu-minta-tolong-a84aed85ff42',
+    category: 'writing',
+    description: 'Bahasan psikologis mengenai perbedaan kesedihan mendalam (sadness) dengan depresi klinis.'
+  },
+  {
+    title: 'Ini Cerita Kamu Juga: Alibanana dan Kebun Yang...',
+    url: 'https://www.wattpad.com/1629965156-ini-cerita-kamu-juga-alibanana-dan-kebun-yang',
+    category: 'writing',
+    description: 'Cerita pendek fiksi kolaboratif bersama MADEAI tentang Alibanana dan kebun misteriusnya.'
+  },
+  {
+    title: 'Ini Cerita Kamu Juga: Permintaan Baharudin',
+    url: 'https://www.wattpad.com/1629967684-ini-cerita-kamu-juga-permintaan-baharudin-1-2',
+    category: 'writing',
+    description: 'Naskah cerita fiksi berseri mengenai keinginan dan dilema hidup Baharudin.'
+  },
+  {
+    title: 'Ini Cerita Kamu Juga: Tanda di Bawah Bendera',
+    url: 'https://www.wattpad.com/1629968923-ini-cerita-kamu-juga-tanda-di-bawah-bendera-1-5',
+    category: 'writing',
+    description: 'Kisah fiksi perjuangan dan simbolisme bendera dalam serial kolaboratif.'
+  },
+  {
+    title: 'Ini Cerita Kamu Juga: Kitab Yang Tidak Ada di Rak',
+    url: 'https://www.wattpad.com/1629970605-ini-cerita-kamu-juga-kitab-yang-tidak-ada-di-rak',
+    category: 'writing',
+    description: 'Misteri pencarian manuskrip hilang dalam perpustakaan fiksi tersembunyi.'
+  },
+  {
+    title: 'POV: Cewek Jepang Capek Hustle Culture & Cheat Code Qawwam',
+    url: 'https://medium.com/@madeaircun/pov-lo-cewek-jepang-yang-udah-capek-sama-hustle-culture-terus-nemun-cheat-code-bernama-qawwam-dcbfa8d80f4e',
+    category: 'writing',
+    description: 'Perspektif kejenuhan budaya kerja Jepang (karoshi) dan solusi konsep kepemimpinan rumah tangga Islam (Qawwam).'
+  },
+  {
+    title: 'Umbar Aib di Sosmed: Cari Solusi atau Sensasi?',
+    url: 'https://medium.com/@madeaircun/umbar-aib-di-sosmed-katanya-cari-solusi-nyatanya-cuma-cari-sensasi-dan-bikin-tambah-sakit-0de46e2b6330',
+    category: 'writing',
+    description: 'Kritik sosial tentang tren curhat masalah pribadi secara terbuka di jagat maya.'
+  },
+  {
+    title: 'Matinya Otoritas: Youtuber vs Media Arus Utama',
+    url: 'https://medium.com/@madeaircun/matinya-otoritas-kenapa-kita-lebih-percaya-youtuber-daripada-media-arus-utama-bbf0b5266ea3',
+    category: 'writing',
+    description: 'Analisis pergeseran kepercayaan publik dari instansi media pers tradisional ke kreator video independen.'
+  },
+  {
+    title: 'AI Nggak Akan Gantiin Kamu, Tapi...',
+    url: 'https://medium.com/@madeaircun/ai-nggak-akan-gantiin-kamu-tapi-orang-yang-punya-otak-saat-ai-nya-mati-yang-bakal-gantiin-kamu-53f5619971f3',
+    category: 'writing',
+    description: 'Pandangan realistis tentang relevansi keahlian berpikir manusia orisinal di tengah maraknya era AI.'
+  },
+  {
+    title: 'Dari Kokpit Pesawat Tempur ke Ruang Operasi',
+    url: 'https://medium.com/@madeaircun/dari-kokpit-pesawat-tempur-ke-ruang-operasi-bagaimana-perang-dunia-ii-menyelamatkan-mata-kita-f0e4102e7fae',
+    category: 'writing',
+    description: 'Sejarah unik bagaimana inovasi kedirgantaraan militer PD II membantu kemajuan bedah optik mata.'
+  },
+  {
+    title: 'Mitos Rumput Tetangga Lebih Hijau Pasca-Perceraian',
+    url: 'https://medium.com/@madeaircun/mitos-rumput-tetangga-lebih-hijau-memahami-dinamika-hubungan-dan-market-value-pasca-perceraian-7e22787070ff',
+    category: 'writing',
+    description: 'Psikologi relasi dan penilaian nilai tawar sosial pasca-perpisahan pernikahan.'
+  },
+  {
+    title: 'Kenapa Kita Merasa Hampa Justru Saat Paling Berguna?',
+    url: 'https://medium.com/@madeaircun/kenapa-kita-merasa-hampa-justru-saat-paling-berguna-membedah-krisis-identitas-perempuan-modern-a34ca410ce6b',
+    category: 'writing',
+    description: 'Ulasan sosiologis krisis identitas eksistensial wanita karir di perkotaan.'
+  },
+  {
+    title: 'Seni Menjadi Pecah: Perspektif Kintsugi',
+    url: 'https://medium.com/@madeaircun/seni-menjadi-pecah-mengapa-retakan-di-hidupmu-justru-berharga-perspektif-kintsugi-psikologi-97863727bb23',
+    category: 'writing',
+    description: 'Mengintegrasikan seni perbaikan keramik emas Jepang (Kintsugi) dengan pemulihan trauma mental.'
+  },
+  {
+    title: 'Kenapa Motivasi itu Penipu',
+    url: 'https://medium.com/@madeaircun/kenapa-motivasi-itu-penipu-rahasia-membangun-mental-baja-saat-hidup-lagi-ngaco-f0e8aea00749',
+    category: 'writing',
+    description: 'Mengapa disiplin dan sistem jauh lebih berharga daripada luapan motivasi sesaat.'
+  },
+  {
+    title: 'Seni Menibu Pasir: Isi Kepala Komputermu',
+    url: 'https://medium.com/@madeaircun/seni-menipu-pasir-mengapa-anda-perlu-mengerti-isi-kepala-komputer-anda-4e0e1314acd1',
+    category: 'writing',
+    description: 'Edukasi perangkat keras bagaimana silikon (pasir) diubah menjadi prosesor super cerdas.'
+  },
+  {
+    title: 'Fenomena Brain Rot & Algoritma Sosmed',
+    url: 'https://medium.com/@madeaircun/fenomena-brain-rot-kenapa-hp-lo-bikin-lo-lupa-niat-awal-dan-cara-otak-lo-disuapin-algoritma-0391e6caf90e',
+    category: 'writing',
+    description: 'Dampak kecanduan stimulasi video pendek (TikTok/Reels) pada neurotransmitter dopamin otak.'
+  },
+  {
+    title: 'Tuhan Bukan Tukang Pencet Tombol',
+    url: 'https://medium.com/@madeaircun/tuhan-bukan-tukang-pencet-tombol-kenapa-realitas-kita-belum-shutdown-detik-ini-bb118fcc7bab',
+    category: 'writing',
+    description: 'Refleksi filosofis-teologis tentang eksistensi alam semesta dan pemeliharaan ilahi.'
+  },
+  {
+    title: 'Benteng Terakhir: Institusi Keluarga di Era Digital',
+    url: 'https://medium.com/@madeaircun/benteng-terakhir-mengapa-institusi-keluarga-bukan-sekadar-pajangan-di-era-digital-ebd812fce1d4',
+    category: 'writing',
+    description: 'Pentingnya pengokohan struktur terkecil masyarakat (keluarga) membendung arus informasi bebas.'
+  },
+  {
+    title: 'Mencari Mizan di Tengah Hustle Culture',
+    url: 'https://medium.com/@madeaircun/mencari-mizan-di-tengah-hustle-culture-mengapa-burnout-adalah-prank-terbesar-abad-ini-a4fb717d3929',
+    category: 'writing',
+    description: 'Konsep keseimbangan hidup (mizan) sebagai penangkal stres kerja berlebihan.'
+  },
+  {
+    title: 'Menikah Itu Bukan Final Boss, Tapi Awal Bootcamp Rohani',
+    url: 'https://medium.com/@madeaircun/menikah-itu-bukan-final-boss-tapi-awal-bootcamp-rohani-seni-berantem-yang-bikin-makin-cinta-8a57ba0f222f',
+    category: 'writing',
+    description: 'Seni mengelola konflik pasangan suami istri agar mempererat ikatan pernikahan.'
+  },
+  {
+    title: 'Saat Terapi Saja Tidak Cukup: Seni Menyembuhkan Jiwa',
+    url: 'https://medium.com/@madeaircun/saat-terapi-saja-tidak-cukup-mengapa-kita-perlu-melirik-kembali-seni-menyembuhkan-jiwa-ala-27bc8d2c36d1',
+    category: 'writing',
+    description: 'Pendekatan komplementer holistik spiritual untuk memulihkan luka batin terdalam.'
+  },
+  {
+    title: 'Arsitektur Jiwa dalam Tradisi Islam',
+    url: 'https://medium.com/@madeaircun/mengapa-psikologi-modern-terkadang-terasa-hambar-menengok-arsitektur-jiwa-dalam-tradisi-islam-3d18846731fd',
+    category: 'writing',
+    description: 'Membandingkan kognisi psikologi sekuler barat dengan anatomi kalbu dan akal dalam Islam.'
+  },
+  {
+    title: 'Saat Iman Bertemu Kesehatan Mental',
+    url: 'https://medium.com/@madeaircun/saat-iman-bertemu-kesehatan-mental-mengapa-berdoa-saja-terkadang-belum-cukup-7b632a62fee1',
+    category: 'writing',
+    description: 'Menjembatani ikhtiar medis/psikologis dengan kepasrahan doa spiritual.'
+  },
+  {
+    title: 'Siapa yang Sebenarnya Menyetir Tubuh Anda?',
+    url: 'https://medium.com/@madeaircun/siapa-yang-sebenarnya-menyetir-tubuh-anda-5cc35dde7aff',
+    category: 'writing',
+    description: 'Diskusi biologi saraf mengenai alam bawah sadar, refleks instingtif, dan kehendak bebas.'
+  },
+  {
+    title: 'Kasus Chromebook Nadiem Makarim',
+    url: 'https://medium.com/@madeaircun/kasus-chromebook-nadiem-makarim-korupsi-nyata-atau-kriminalisasi-kebijakan-867842b3cae5',
+    category: 'writing',
+    description: 'Telaah kritis kebijakan pengadaan laptop Chromebook di sekolah negeri di Indonesia.'
+  },
+  {
+    title: 'Pengaruh Dominasi Konsumsi Infotainment',
+    url: 'https://medium.com/@madeaircun/pengaruh-dominasi-konsumsi-infotainment-terhadap-kualitas-sumber-daya-manusia-dan-prospek-kemajuan-9015a91cdacf',
+    category: 'writing',
+    description: 'Dampak paparan konten gosip dan sensasi terhadap degradasi daya kritis masyarakat.'
+  },
+  {
+    title: 'Kesehatan Mental: Tinjauan Historis, Kognitif & Holistik Islam',
+    url: 'https://medium.com/@madeaircun/kesehatan-mental-dalam-perspektif-islam-tinjauan-historis-kognitif-dan-pendekatan-holistik-f852b6261c4f',
+    category: 'writing',
+    description: 'Sejarah pengobatan mental di masa kejayaan Islam (bimaristan) dan integrasi sains kognitif modern.'
+  },
+  {
+    title: 'Saat Otak Menciut Karena Stres',
+    url: 'https://medium.com/@madeaircun/saat-otak-menciut-karena-stres-apa-yang-sebenarnya-terjadi-di-dalam-kepala-kita-964789868d25',
+    category: 'writing',
+    description: 'Mekanisme biologis hormon kortisol merusak sel saraf di hipokampus otak.'
+  },
+
   // --- ORIGINAL PROJECTS (arielrifkycahyadi.github.io) ---
   {
     title: 'Macneo by MadeAI',
@@ -174,7 +382,7 @@ const projects = [
   },
   {
     title: 'Anxious-Avoidant Relationship',
-    url: 'https://artriel-arch.github.io/anxious-avoidant-relationship-dijelaskan-oleh-ariel.html',
+    url: 'https://artriel-arch.github.io/anxious-avoidant-relationship-dijelaskan-oleh-ariel-dijelaskan-oleh-ariel.html',
     category: 'lifestyle',
     description: 'Penjelasan psikologis dinamika hubungan cemas-menghindar (Anxious-Avoidant).'
   },
@@ -353,7 +561,7 @@ const projects = [
     description: 'Menghitung kemungkinan menemukan pasangan ideal lewat parameter matematika.'
   },
   {
-    title: 'Sabun Aril Shop',
+    title: 'Sabun Artrel Shop',
     url: 'https://artriel-arch.github.io/sabunaril.html',
     category: 'tools',
     description: 'Katalog toko sabun kecantikan herbal buatan rumahan.'
